@@ -24,7 +24,7 @@ with webdriver.Chrome(driver_path) as driver:
     el = '//*[@id="gwt-uid-20"]/table/tbody/tr[2]/td/table/tbody/tr[2]/td/input'
     WebDriverWait(driver, 15).until(EC.element_to_be_clickable((By.XPATH, el)))
 
-    for i in range(0, len(txt), 4):
-        driver.find_element_by_xpath(el).send_keys(txt[i:i+4])
+    for i in range(0, len(txt), 3):
+        driver.find_element_by_xpath(el).send_keys(txt[i:i+3])
 
     sleep(20)
